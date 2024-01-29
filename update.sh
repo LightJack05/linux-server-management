@@ -21,5 +21,5 @@ rm -rf "$oldInstallRoot"/*.sh
 
 echo "[$oldTime | Management Update ] Downloading and installing new version..." >> $oldLogFile
 
-curl $repoUrl/install.sh | bash | sed -e "s/^/[$oldTime | Management Update] /" >> $oldLogFile
+curl $repoUrl/install.sh | bash | sed -e "s/^/[$oldTime | Management Update ] /" >> $oldLogFile
 
