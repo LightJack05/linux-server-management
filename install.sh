@@ -15,7 +15,7 @@ echo "installRoot=$installRoot" >> $installRoot/variables.sh
 echo "logfile=$logfile" >> $installRoot/variables.sh
 echo "branch=$branch" >> $installRoot/variables.sh
 echo "repoUrl=$repoUrl" >> $installRoot/variables.sh
-echo "cronTag=$cronTag" >> $installRoot/variables.sh
+echo "cronTag=\"$cronTag\"" >> $installRoot/variables.sh
 
 echo "Installing prerequisites..."
 apt install wget curl -y
