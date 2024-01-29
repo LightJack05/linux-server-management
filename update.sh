@@ -14,7 +14,7 @@ if [[ -z "$installRoot" ]]
 then
     exit 1
 fi
-rm -f "$oldInstallRoot"/*.sh
+rm -f $oldInstallRoot/*.sh
 
 
 (crontab -l 2>/dev/null | grep -v "$oldCronTag") | crontab -
