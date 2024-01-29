@@ -1,5 +1,4 @@
 # Script for self-updating the management (May also rm -rf your server...)
-
 source variables.sh
 oldInstallRoot=$installRoot
 oldLogFile=$logfile
