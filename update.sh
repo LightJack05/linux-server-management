@@ -10,5 +10,5 @@ rm -rf $installRoot/*
 
 echo "[$TIME | Management Update ] Downloading and installing new version..." >> $logfile
 
-curl $repoUrl/$branch/install.sh | bash | sed -e "s/^/[$TIME | Management Update] /" >> $logfile
+curl $repoUrl/install.sh | bash | sed -e "s/^/[$TIME | Management Update] /" >> $logfile
 
