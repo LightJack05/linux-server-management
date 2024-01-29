@@ -26,6 +26,7 @@ wget $repoUrl/daily.sh -P $installRoot
 wget $repoUrl/weekly.sh -P $installRoot
 wget $repoUrl/monthly.sh -P $installRoot
 wget $repoUrl/yearly.sh -P $installRoot
+wget $repoUrl/uninstall.sh -P $installRoot
 wget $repoUrl/update.sh -P $installRoot
 wget $repoUrl/update-server.sh -P $installRoot
 
