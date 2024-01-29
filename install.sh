@@ -4,6 +4,7 @@ installRoot=/srv/management
 logfile=/srv/management/management.log
 branch="main"
 repoUrl="https://raw.githubusercontent.com/LightJack05/linux-server-management/$branch"
+cronTag="management-identifier"
 
 echo "Creating $installRoot..."
 mkdir -p $installRoot
@@ -33,10 +34,10 @@ echo "Updating permissions..."
 chmod +x $installRoot/*.sh
 
 echo "Creating cronjob(s) for current user..."
-(crontab -l 2>/dev/null; echo "10 * * * * $installRoot/hourly.sh") | crontab -
-(crontab -l 2>/dev/null; echo "10 3 * * * $installRoot/dialy.sh") | crontab -
-(crontab -l 2>/dev/null; echo "10 3 * * 1 $installRoot/weekly.sh") | crontab -
-(crontab -l 2>/dev/null; echo "10 3 1 * * $installRoot/monthly.sh") | crontab -
-(crontab -l 2>/dev/null; echo "10 3 1 1 * $installRoot/yearly.sh") | crontab -
+(crontab -l 2>/dev/null; echo "10 * * * * $installRoot/hourly.sh # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "10 3 * * * $installRoot/dialy.sh # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "10 3 * * 1 $installRoot/weekly.sh # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "10 3 1 * * $installRoot/monthly.sh # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "10 3 1 1 * $installRoot/yearly.sh # $cronTag") | crontab -
 
 echo "Completed setup. Installed to: $installRoot"
