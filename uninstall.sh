@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 # Script for self-updating the management
 
 source variables.sh
