@@ -34,10 +34,10 @@ echo "Updating permissions..."
 chmod +x $installRoot/*.sh
 
 echo "Creating cronjob(s) for current user..."
-(crontab -l 2>/dev/null; echo "10 * * * * $installRoot/hourly.sh # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "0 * * * * $installRoot/hourly.sh # $cronTag") | crontab -
 (crontab -l 2>/dev/null; echo "10 3 * * * $installRoot/dialy.sh # $cronTag") | crontab -
-(crontab -l 2>/dev/null; echo "10 3 * * 1 $installRoot/weekly.sh # $cronTag") | crontab -
-(crontab -l 2>/dev/null; echo "10 3 1 * * $installRoot/monthly.sh # $cronTag") | crontab -
-(crontab -l 2>/dev/null; echo "10 3 1 1 * $installRoot/yearly.sh # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "20 3 * * 1 $installRoot/weekly.sh # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "30 3 1 * * $installRoot/monthly.sh # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "40 3 1 1 * $installRoot/yearly.sh # $cronTag") | crontab -
 
 echo "Completed setup. Installed to: $installRoot"
