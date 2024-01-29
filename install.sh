@@ -36,7 +36,7 @@ echo "Updating permissions..."
 chmod +x $installRoot/*.sh
 
 echo "Creating cronjob(s) for current user..."
-(crontab -l 2>/dev/null; echo "*/2 * * * * (cd $installRoot; cat update.sh | bash) # $cronTag") | crontab -
+(crontab -l 2>/dev/null; echo "*/10 * * * * (cd $installRoot; cat update.sh | bash) # $cronTag") | crontab -
 (crontab -l 2>/dev/null; echo "0 * * * * (cd $installRoot; ./hourly.sh) # $cronTag") | crontab -
 (crontab -l 2>/dev/null; echo "10 3 * * * (cd $installRoot; ./dialy.sh) # $cronTag") | crontab -
 (crontab -l 2>/dev/null; echo "20 3 * * 1 (cd $installRoot; ./weekly.sh) # $cronTag") | crontab -
