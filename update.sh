@@ -9,7 +9,14 @@ oldTime=$TIME
 echo "[$oldTime | Management Update ] Starting management update..." >> $oldLogFile
 echo "[$oldTime | Management Update ] Removing old installation..." >> $oldLogFile
 
-rm -rf $oldInstallRoot/*
+# Dangerous.
+if [[ -z "$installRoot" ]]
+then
+    exit 1
+fi
+rm -rf "$oldInstallRoot"/*.sh
+
+
 (crontab -l 2>/dev/null | grep -v "$oldCronTag") | crontab -
 
 echo "[$oldTime | Management Update ] Downloading and installing new version..." >> $oldLogFile
