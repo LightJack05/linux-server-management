@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # @ !!! DO NOT CHANGE YOUR VARIABLES HERE, USE INSTALL.SH !!!        @
 # @ File for development/intellisense purposes only!                 @

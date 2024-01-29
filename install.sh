@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 TIME=`date +%F@%T`
 installRoot=/srv/management
 logfile=/srv/management/management.log

@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 source variables.sh
 
 echo "[$TIME | Update Script] Starting server update..." >> $logfile
