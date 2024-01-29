@@ -28,6 +28,10 @@ echo "Updating permissions..."
 chmod +x $installRoot/*.sh
 
 echo "Creating cronjob(s) for current user..."
+(crontab -l 2>/dev/null; echo "10 * * * * $installRoot/hourly.sh") | crontab -
+(crontab -l 2>/dev/null; echo "10 3 * * * $installRoot/dialy.sh") | crontab -
 (crontab -l 2>/dev/null; echo "10 3 * * 1 $installRoot/weekly.sh") | crontab -
+(crontab -l 2>/dev/null; echo "10 3 1 * * $installRoot/monthly.sh") | crontab -
+(crontab -l 2>/dev/null; echo "10 3 1 1 * $installRoot/yearly.sh") | crontab -
 
 echo "Completed setup. Installed to: $installRoot"
