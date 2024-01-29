@@ -1,0 +1,1 @@
+# Script for self-updating the management
