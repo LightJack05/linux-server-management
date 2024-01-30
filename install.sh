@@ -2,7 +2,7 @@
 TIME=`date +%F@%T`
 installRoot=/srv/management
 logfile=/srv/management/management.log
-branch="main"
+branch="devel"
 repoUrl="https://raw.githubusercontent.com/LightJack05/linux-server-management/$branch"
 cronTag="management-identifier"
 
